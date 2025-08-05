@@ -1,0 +1,57 @@
+/* src/components/SkillBadge.module.css */
+.skill {
+  margin-bottom: var(--spacing-md);
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.skillName {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.skillLevel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  text-transform: capitalize;
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background-color: var(--color-border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 3px;
+  transition: width var(--transition-normal) ease;
+}
+
+/* Level colors */
+.level-frontend {
+  background-color: #3b82f6;
+}
+
+.level-backend {
+  background-color: #10b981;
+}
+
+.level-devops {
+  background-color: #8b5cf6;
+}
+
+.level-design {
+  background-color: #ec4899;
+}
+
+.level-other {
+  background-color: #6b7280;
+}
