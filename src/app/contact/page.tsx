@@ -65,13 +65,14 @@ export default function Contact() {
                   <h3 className={styles.sectionTitle}>Connect With Me</h3>
                   <div className={styles.socialLinks}>
                     {socialLinks.map((social) => {
-                      const Icon = {
+                      const iconMap = {
                         FaGithub,
                         FaLinkedin,
                         FaFacebook,
                         FaEnvelope,
-                      }[social.icon as keyof typeof social.icon];
-                      
+                      };
+                      const Icon = iconMap[social.icon as keyof typeof iconMap];
+
                       return (
                         <a
                           key={social.name}
