@@ -16,14 +16,14 @@ export default function Contact() {
 
       <Header />
       
-      <main>
+      <main>  
         {/* Hero Section */}
         <section className={styles.hero}>
           <div className="container">
             <div className={styles.heroContainer}>
               <h1 className={styles.heroTitle}>Get In Touch</h1>
               <p className={styles.heroSubtitle}>
-                I'm always interested in new opportunities and exciting projects
+                I am always interested in new opportunities and exciting projects
               </p>
             </div>
           </div>

@@ -1,11 +1,12 @@
 // src/pages/about.tsx
 import Head from 'next/head';
+import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SkillBadge from '../components/SkillBadge';
 import { personalInfo, skills, experiences, education } from '../lib/data';
 import styles from './about.module.css';
-import { FaMapMarkerAlt, FaEnvelope, FaGraduationCap, FaBriefcase } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 
 export default function About() {
   // Group skills by category
@@ -50,11 +51,13 @@ export default function About() {
         <section className={styles.personalSection}>
           <div className="container">
             <div className={styles.personalContainer}>
-              <div className={styles.avatarContainer}>
-                <img 
-                  src={personalInfo.avatar} 
-                  alt={personalInfo.name} 
+                <Image
+                  src={personalInfo.avatar}
+                  alt={personalInfo.name}
                   className={styles.avatar}
+                  width={160}
+                  height={160}
+                  priority
                 />
               </div>
               <div className={styles.personalInfo}>
@@ -81,7 +84,6 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
         </section>
 
         {/* Skills Section */}

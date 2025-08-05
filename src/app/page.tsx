@@ -1,5 +1,6 @@
 // src/pages/index.tsx
 import Head from 'next/head';
+import Image from 'next/image';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ProjectCard from './components/ProjectCard';
@@ -52,15 +53,16 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className={styles.heroImage}>
-                <img 
-                  src="/images/avatar.jpg" 
-                  alt="Richmond E. Hinggo" 
+                <Image
+                  src="/images/avatar.jpg"
+                  alt="Richmond E. Hinggo"
                   className={styles.avatar}
+                  width={200}
+                  height={200}
+                  priority
                 />
               </div>
             </div>
-          </div>
         </section>
 
         {/* Featured Projects Section */}
